@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#284594">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="255dp"
+        android:layout_height="322dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/with_blue_background" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Sports Club"
+        android:textAlignment="center"
+        android:textColor="#f8b30d"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/creator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:fontFamily="monospace"
+        android:text="created by Aridians"
+        android:textAlignment="center"
+        android:textColor="#78b273"
+        android:textSize="20sp" />
+</RelativeLayout>
