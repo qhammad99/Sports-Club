@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".matchActivity">
+    <TextView
+        android:id="@+id/activityLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tournament Name"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match Name"
+        android:textSize="22sp"
+        android:textColor="#808000"
+        android:textAlignment="center"
+        android:layout_marginTop="2dp"/>
+
+    <GridLayout
+        android:id="@+id/firstMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="3"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+
+        <!--first row-->
+        <TextView
+            android:layout_columnSpan="2"
+            android:id="@+id/matchDay"
+            android:text="Match Day"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_gravity="left"/>
+        <TextView
+            android:id="@+id/matchTime"
+            android:text="Match Time"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_gravity="right"
+            />
+
+        <!--second row-->
+        <TextView
+            android:id="@+id/firstTeam"
+            android:text="Team One"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="vs"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/teamTwo"
+            android:text="Team Two"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            />
+
+    </GridLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Players"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team One"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Two"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="10dp"
+            />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/firstTeamPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:paddingHorizontal="10dp">
+
+        <!--first row-->
+        <TextView
+            android:id="@+id/playersName"
+            android:text="Players Name"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/playersSkills"
+            android:text="Skills"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="right"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+    </GridLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playersInfor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toss:"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Won toss and decided to duz duz"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Pindi Stadium"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+</LinearLayout>

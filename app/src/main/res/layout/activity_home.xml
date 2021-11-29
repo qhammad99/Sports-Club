@@ -30,10 +30,21 @@
         android:id="@+id/firstMatch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:rowCount="3"
+        android:rowCount="4"
         android:columnCount="3"
         android:layout_marginVertical="30dp"
         android:padding="10dp">
+
+        <!--zero row-->
+        <TextView
+            android:layout_columnSpan="3"
+            android:id="@+id/matchTournament"
+            android:text="Tournament Name:"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textColor="#ff0000"/>
 
         <!--first row-->
         <TextView
@@ -88,11 +99,21 @@
         android:id="@+id/secondMatch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:rowCount="3"
+        android:rowCount="4"
         android:columnCount="3"
         android:layout_marginVertical="30dp"
         android:padding="10dp">
 
+        <!--zero row-->
+        <TextView
+            android:layout_columnSpan="3"
+            android:id="@+id/matchTournament2"
+            android:text="Tournament Name:"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textColor="#ff0000"/>
         <!--first row-->
         <TextView
             android:layout_columnSpan="2"
