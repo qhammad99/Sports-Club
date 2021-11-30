@@ -6,74 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".loginActivity"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:background="@drawable/logo_lower"
+>
 
-    <ImageView
-        android:id="@+id/logo"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/with_white_background" />
+        android:layout_height="200dp"
+        android:background="@drawable/background_test">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="Sports Club"
-        android:textAlignment="center"
-        android:textSize="48sp"
-        android:textColor="#284594"/>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo_main" />
 
-    <TextView
-        android:id="@+id/label"
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:text="Signin in"
-        android:textAlignment="center"
-        android:textColor="#fa1505"
-        android:textSize="30sp" />
+        >
 
-    <EditText
-        android:id="@+id/etMail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textSize="24sp"
-        android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/armata"
+            android:text="Sign in"
+            android:textAlignment="center"
+            android:textColor="#fa1505"
+            android:textSize="24sp" />
+        <EditText
+            android:id="@+id/etMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:background="#e9dffd"
+            android:textColor="#5e17eb"
+            android:textColorHint="#5e17eb"
+            android:fontFamily="@font/average_sans"
+            />
 
-    <EditText
-        android:id="@+id/etPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textSize="24sp"
-        android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#5e17eb"
+            android:padding="10dp"
+            android:background="#e9dffd"
+            android:textColorHint="#5e17eb"
+            android:fontFamily="@font/average_sans"
+            />
 
-    <Button
-        android:id="@+id/sbtBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Log in"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#284594"
-        />
+        <Button
+            android:id="@+id/sbtBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Log in"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#5e17eb"
+            android:textColor="#fff"
+            />
 
-    <Button
-        android:id="@+id/signBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#00000000"
-        android:text="Not have account? sign up"
-        android:textColor="#000"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/signBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Not have account? sign up"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
 
-
+    </LinearLayout>
 </LinearLayout>

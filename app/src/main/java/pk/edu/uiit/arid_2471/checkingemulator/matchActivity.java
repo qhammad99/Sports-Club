@@ -12,16 +12,10 @@ import android.widget.Toast;
 
 public class matchActivity extends AppCompatActivity {
 
-    ListView playersInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
-
-        String[] infor={
-                "player1", "player2", "player3", "player4", "player5", "player6",
-                "player7", "player8", "player9", "player10", "player11"};
-        playersInfo=findViewById(R.id.playersInfor);
     }
 
     @Override
@@ -44,7 +38,6 @@ public class matchActivity extends AppCompatActivity {
             case R.id.logOut:
                 Intent intent=new Intent(matchActivity.this, loginActivity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
         return true;

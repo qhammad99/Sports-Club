@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CheckingEmulator">
         <activity
+            android:name=".userProfile"
+            android:exported="false" />
+        <activity
+            android:name=".teams"
+            android:exported="false" />
+        <activity
+            android:name=".teamRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".tournamets"
+            android:exported="false" />
+        <activity
             android:name=".matchActivity"
             android:exported="false" />
         <activity

@@ -10,12 +10,18 @@
         <entry key="..\:/Users/Wiz Tech/Desktop/checkingEmulator/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Wiz Tech/Desktop/checkingEmulator/app/src/main/res/menu/option_menu.xml" value="0.1" />
         <entry key="..\:/Users/Wiz Tech/Desktop/checkingEmulator/app/src/main/res/mipmap-anydpi-v26/uaarLogo.xml" value="0.1125" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
         <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_home.xml" value="0.2" />
-        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_login.xml" value="0.12771739130434784" />
-        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_match.xml" value="0.2037037037037037" />
-        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_team_registration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/activity_user_profile.xml" value="0.11548913043478261" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/fragment_team_one_players.xml" value="0.1213768115942029" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/layout/fragment_team_two_players.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/menu/option_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/maadi/Desktop/sportsClub/Sports-Club/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.16944444444444445" />
       </map>
     </option>
   </component>

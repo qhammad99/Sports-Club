@@ -5,36 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#284594">
+    android:background="#5e17eb">
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="255dp"
-        android:layout_height="322dp"
+        android:layout_width="185dp"
+        android:layout_height="240dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/with_blue_background" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/baloo_bhai"
-        android:text="Sports Club"
-        android:textAlignment="center"
-        android:textColor="#f8b30d"
-        android:textSize="60sp" />
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo_main" />
 
     <TextView
         android:id="@+id/creator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
+        android:layout_below="@id/logo"
         android:fontFamily="monospace"
-        android:text="created by Aridians"
+        android:text="created by"
+        android:layout_marginTop="250dp"
         android:textAlignment="center"
         android:textColor="#78b273"
-        android:textSize="20sp" />
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creator"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Aridians"
+        android:textAlignment="center"
+        android:textColor="#f6ef2d"
+        android:textSize="30sp" />
+
+
 </RelativeLayout>
