@@ -2,4 +2,55 @@
     <string name="app_name">Club</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--for main activity-->
+    <string name="logo_description">Logo of Sports Club</string>
+    <string name="creator">created by</string>
+    <string name="creator_name">Aridians</string>
+
+
+    <!--for login activity-->
+    <string name="signin_label">Sign in</string>
+
+    <!--hints-->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    <string name="btn_login">Log in</string>
+    <string name="btn_shift_signup">Not have account? sign up</string>
+
+    <!--for signup1 activity-->
+    <string name="signup_label">Create an account</string>
+
+    <!--remaining hints-->
+    <string name="hint_name">Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_city">City</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+
+    <string name="label_gender">Gender:</string>
+    <string name="gender1">Male</string>
+    <string name="gender2">Female</string>
+
+    <string name="label_skill">Skill:</string>
+    <string name="skill1">Batsman</string>
+    <string name="skill2">Bowler</string>
+    <string name="skill3">Keeper</string>
+
+    <string name="btn_next">Next -></string>
+    <string name="btn_shift_login">You have an account? log in</string>
+
+    <!--for signup2 activity-->
+    <string name="signup2_label">Skill Details</string>
+    <string name="btn_signup">Sign up</string>
+
+    <string name="label_batsman">Batsman:</string>
+    <string name="batsman1">Left Hand Batsman</string>
+    <string name="batsman2">Right Hand Batsman</string>
+
+    <string name="label_bowler">Bowler:</string>
+    <string name="bowler1">Left Hand Fast Bowler</string>
+    <string name="bowler2">Right Hand Fast Bowler</string>
+    <string name="bowler3">Left Hand Spin Bowler</string>
+    <string name="bowler4">Right Hand Spin Bowler</string>
 </resources>

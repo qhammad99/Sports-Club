@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                for full screen
          */
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
         setContentView(R.layout.activity_main);

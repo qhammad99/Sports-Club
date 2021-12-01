@@ -1,14 +1,16 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class userProfile extends AppCompatActivity {
+import pk.edu.uiit.arid_2471.checkingemulator.R;
+
+public class teams extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_teams);
     }
 }

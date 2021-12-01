@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.MainActivity"
     android:background="#5e17eb">
 
     <ImageView
@@ -13,7 +13,8 @@
         android:layout_height="240dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:src="@drawable/logo_main" />
+        android:src="@drawable/logo_main"
+        android:contentDescription="@string/logo_description"/>
 
     <TextView
         android:id="@+id/creator"
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
         android:fontFamily="monospace"
-        android:text="created by"
+        android:text="@string/creator"
         android:layout_marginTop="250dp"
         android:textAlignment="center"
         android:textColor="#78b273"
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/creator"
         android:fontFamily="@font/baloo_bhai"
-        android:text="Aridians"
+        android:text="@string/creator_name"
         android:textAlignment="center"
         android:textColor="#f6ef2d"
         android:textSize="30sp" />

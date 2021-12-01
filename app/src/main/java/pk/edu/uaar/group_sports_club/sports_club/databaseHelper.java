@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

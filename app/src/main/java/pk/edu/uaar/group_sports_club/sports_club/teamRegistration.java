@@ -1,8 +1,10 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class teamRegistration extends AppCompatActivity {
 

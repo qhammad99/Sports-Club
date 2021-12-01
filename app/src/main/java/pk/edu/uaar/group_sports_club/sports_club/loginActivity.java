@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class loginActivity extends AppCompatActivity {
     Button submit;

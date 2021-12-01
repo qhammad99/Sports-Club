@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homeActivity"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.homeActivity"
     android:orientation="vertical"
     android:padding="5dp"
     android:background="@drawable/back_screen"

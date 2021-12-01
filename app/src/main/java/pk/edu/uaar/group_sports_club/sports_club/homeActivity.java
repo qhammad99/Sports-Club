@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.Toast;
 
-import java.util.zip.Inflater;
+import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class homeActivity extends AppCompatActivity {
 
@@ -57,14 +56,16 @@ public class homeActivity extends AppCompatActivity {
         //return super.onOptionsItemSelected(item);
         switch (item.getItemId()){
             case R.id.myProfile:
-                Toast.makeText(homeActivity.this, "Your Profile", Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(homeActivity.this, userProfile.class);
+                startActivity(intent);
                 break;
             case R.id.myTeam:
-                Toast.makeText(homeActivity.this, "Your Team", Toast.LENGTH_LONG).show();
+                Intent intent2=new Intent(homeActivity.this, teams.class);
+                startActivity(intent2);
                 break;
             case R.id.logOut:
-                Intent intent=new Intent(homeActivity.this, loginActivity.class);
-                startActivity(intent);
+                Intent intent3=new Intent(homeActivity.this, loginActivity.class);
+                startActivity(intent3);
                 finish();
                 break;
         }

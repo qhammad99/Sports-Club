@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,8 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class matchActivity extends AppCompatActivity {
 
@@ -30,14 +31,16 @@ public class matchActivity extends AppCompatActivity {
         //return super.onOptionsItemSelected(item);
         switch (item.getItemId()){
             case R.id.myProfile:
-                Toast.makeText(matchActivity.this, "Your Profile", Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(matchActivity.this, userProfile.class);
+                startActivity(intent);
                 break;
             case R.id.myTeam:
-                Toast.makeText(matchActivity.this, "Your Team", Toast.LENGTH_LONG).show();
+                Intent intent2=new Intent(matchActivity.this, teams.class);
+                startActivity(intent2);
                 break;
             case R.id.logOut:
-                Intent intent=new Intent(matchActivity.this, loginActivity.class);
-                startActivity(intent);
+                Intent intent3=new Intent(matchActivity.this, loginActivity.class);
+                startActivity(intent3);
                 break;
         }
         return true;

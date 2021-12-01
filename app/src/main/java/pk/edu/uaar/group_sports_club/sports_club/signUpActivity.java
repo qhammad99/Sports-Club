@@ -1,4 +1,4 @@
-package pk.edu.uiit.arid_2471.checkingemulator;
+package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,9 +9,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import pk.edu.uiit.arid_2471.checkingemulator.R;
+
 public class signUpActivity extends AppCompatActivity {
 
-    Button submit;
+    Button next;
     TextView logInPage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class signUpActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_sign_up);
 
-        submit=findViewById(R.id.sbtBtn);
+        next=findViewById(R.id.nextBtn);
         logInPage=findViewById(R.id.signBtn);
 
         logInPage.setOnClickListener((View v)->{
@@ -29,8 +31,8 @@ public class signUpActivity extends AppCompatActivity {
             finish();
         });
 
-        submit.setOnClickListener((View v)->{
-            Intent intent=new Intent(signUpActivity.this, homeActivity.class);
+        next.setOnClickListener((View v)->{
+            Intent intent=new Intent(signUpActivity.this, signUp2.class);
             startActivity(intent);
             finish();
         });

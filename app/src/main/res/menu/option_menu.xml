@@ -6,7 +6,7 @@
         />
     <item
         android:id="@+id/myTeam"
-        android:title="My Team"
+        android:title="Team"
         />
     <item
         android:id="@+id/logOut"

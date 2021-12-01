@@ -10,31 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CheckingEmulator">
         <activity
-            android:name=".userProfile"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.signUp2"
             android:exported="false" />
         <activity
-            android:name=".teams"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.userProfile"
             android:exported="false" />
         <activity
-            android:name=".teamRegistration"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.teams"
             android:exported="false" />
         <activity
-            android:name=".tournamets"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.teamRegistration"
             android:exported="false" />
         <activity
-            android:name=".matchActivity"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.tournamets"
             android:exported="false" />
         <activity
-            android:name=".homeActivity"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.matchActivity"
             android:exported="false" />
         <activity
-            android:name=".signUpActivity"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.homeActivity"
             android:exported="false" />
         <activity
-            android:name=".loginActivity"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.signUpActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="pk.edu.uaar.group_sports_club.sports_club.loginActivity"
+            android:exported="false" />
+        <activity
+            android:name="pk.edu.uaar.group_sports_club.sports_club.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
