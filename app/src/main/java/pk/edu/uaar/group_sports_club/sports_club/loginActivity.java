@@ -65,8 +65,11 @@ public class loginActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(loginActivity.this, homeActivity.class);
-                        startActivity(intent);
+                        if(!jsonObject.getBoolean("error")) {
+                            Intent intent = new Intent(loginActivity.this, homeActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
                     }catch (JSONException e) {
                         e.printStackTrace();
                     }
