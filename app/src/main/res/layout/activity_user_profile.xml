@@ -4,16 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pk.edu.uaar.group_sports_club.sports_club.userProfile"
-    android:gravity="center">
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.userProfile">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="177dp"
+        android:layout_height="151dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/male" />
 
     <TextView
+        android:id="@+id/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile Activity"
+        android:text="User profile"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textColor="#fa1505"
+        android:layout_below="@id/logo"
+        />
+    <TextView
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_name"
+        android:layout_below="@id/label"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:fontFamily="@font/average_sans"
         />
 
+    <TextView
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_email"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:layout_below="@id/etName"
+        android:fontFamily="@font/average_sans"
+        />
+
+    <TextView
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_phone"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:layout_below="@id/etMail"
+        android:fontFamily="@font/average_sans"
+        />
+
+    <TextView
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_city"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:layout_below="@id/etPhone"
+        android:fontFamily="@font/average_sans"
+        />
+
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Change password"
+        android:textSize="15sp"
+        android:backgroundTint="#5e17eb"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:layout_below="@id/etCity"
+        android:layout_marginRight="10dp"
+        />
 </RelativeLayout>

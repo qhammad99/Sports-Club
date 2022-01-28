@@ -24,7 +24,7 @@
         android:textAlignment="center"
         android:textColor="#fa1505"
         android:textSize="26sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
 
     <LinearLayout
@@ -33,7 +33,7 @@
         android:orientation="vertical"
         android:background="@drawable/corner_background"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:padding="5dp">
 
         <EditText
@@ -107,18 +107,22 @@
                 android:fontFamily="@font/average_sans"
                 />
             <RadioButton
+                android:id="@+id/genderMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gender1"
                 android:textSize="15sp"
-                android:textColor="#087011"/>
+                android:textColor="#087011"
+                android:onClick="genderClicked"/>
             <RadioButton
+                android:id="@+id/genderFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gender2"
                 android:textSize="15sp"
                 android:layout_marginLeft="10dp"
-                android:textColor="#087011"/>
+                android:textColor="#087011"
+                android:onClick="genderClicked"/>
         </RadioGroup>
 
 

@@ -32,10 +32,7 @@
     <string name="gender1">Male</string>
     <string name="gender2">Female</string>
 
-    <string name="label_skill">Skill:</string>
-    <string name="skill1">Batsman</string>
-    <string name="skill2">Bowler</string>
-    <string name="skill3">Keeper</string>
+    <string name="label_keeper">Keeper?</string>
 
     <string name="btn_next">Next -></string>
     <string name="btn_shift_login">You have an account? log in</string>
@@ -47,10 +44,14 @@
     <string name="label_batsman">Batsman:</string>
     <string name="batsman1">Left Hand Batsman</string>
     <string name="batsman2">Right Hand Batsman</string>
+    <string name="batsman3">None</string>
 
-    <string name="label_bowler">Bowler:</string>
-    <string name="bowler1">Left Hand Fast Bowler</string>
-    <string name="bowler2">Right Hand Fast Bowler</string>
-    <string name="bowler3">Left Hand Spin Bowler</string>
-    <string name="bowler4">Right Hand Spin Bowler</string>
+    <string name="label_bowlerType">Bowler Type:</string>
+    <string name="bowlerSpin">Spin Bowler</string>
+    <string name="bowlerFast">Fast Bowler</string>
+    <string name="bowlerNo">None</string>
+
+    <string name="label_bowlerHand">Bowling Hand:</string>
+    <string name="bowler1">Left Hand Bowler</string>
+    <string name="bowler2">Right Hand Bowler</string>
 </resources>
