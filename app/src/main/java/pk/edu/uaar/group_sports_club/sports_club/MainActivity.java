@@ -3,6 +3,7 @@ package pk.edu.uaar.group_sports_club.sports_club;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private final int splashActivityTime=2700;
     Animation topAnimation;
     ImageView img;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         img=findViewById(R.id.logo);
         img.setAnimation(topAnimation);
+        sharedPreferences=getSharedPreferences("login_preference", MODE_PRIVATE);
         /*
             Setting timer
          */
@@ -43,9 +46,15 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this,loginActivity.class);
-                startActivity(intent);
-                finish();
+                if(sharedPreferences.contains("name")){
+                    Intent intent=new Intent(MainActivity.this,homeActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    Intent intent=new Intent(MainActivity.this,loginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, splashActivityTime);
     }

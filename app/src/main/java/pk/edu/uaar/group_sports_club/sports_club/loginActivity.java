@@ -3,6 +3,7 @@ package pk.edu.uaar.group_sports_club.sports_club;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,8 @@ public class loginActivity extends AppCompatActivity {
     TextView signupPage;
     EditText mail, pass;
     databaseHelper helper;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,13 @@ public class loginActivity extends AppCompatActivity {
         mail=findViewById(R.id.etMail);
         pass=findViewById(R.id.etPwd);
         helper=new databaseHelper(this);
+        sharedPreferences=getSharedPreferences("login_preference", MODE_PRIVATE);
+
+//        if(Integer.parseInt(sharedPreferences.getString("id",""))>0){
+//            Intent intent = new Intent(loginActivity.this, homeActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
         signupPage.setOnClickListener((View v)->{
             Intent intent=new Intent(loginActivity.this, signUpActivity.class);
@@ -66,6 +76,12 @@ public class loginActivity extends AppCompatActivity {
                         JSONObject jsonObject = new JSONObject(response);
                         Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
                         if(!jsonObject.getBoolean("error")) {
+
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("id", jsonObject.getString("id"));
+                            editor.putString("name", jsonObject.getString("name"));
+                            editor.commit();
+
                             Intent intent = new Intent(loginActivity.this, homeActivity.class);
                             startActivity(intent);
                             finish();

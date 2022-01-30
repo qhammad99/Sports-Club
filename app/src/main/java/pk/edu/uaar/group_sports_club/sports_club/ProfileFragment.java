@@ -1,5 +1,8 @@
 package pk.edu.uaar.group_sports_club.sports_club;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import pk.edu.uiit.arid_2471.checkingemulator.R;
 
@@ -61,6 +65,20 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        Button logout= view.findViewById(R.id.logoutBtn);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences= getActivity().getSharedPreferences("login_preference", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.clear();
+                editor.commit();
+                Intent intent = new Intent(getActivity(), loginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        return view;
     }
 }

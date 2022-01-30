@@ -94,4 +94,18 @@
         android:layout_marginRight="10dp"
         />
 
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Log out"
+        android:textSize="15sp"
+        android:backgroundTint="#5e17eb"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:layout_below="@id/nextBtn"
+        android:layout_marginRight="10dp"
+        />
+
 </RelativeLayout>
