@@ -2,6 +2,8 @@ package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,65 +12,84 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
+
 import pk.edu.uiit.arid_2471.checkingemulator.R;
 
 public class homeActivity extends AppCompatActivity {
+    FragmentManager manager=getSupportFragmentManager();
+    BottomNavigationView navigation;
 
-    GridLayout firstMatch, secondMatch;
+    TournamentFragment tournament=new TournamentFragment();
+    TeamFragment team = new TeamFragment();
+    NotificationFragment notification= new NotificationFragment();
+    ProfileFragment profile= new ProfileFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        firstMatch=findViewById(R.id.firstMatch);
-        secondMatch=findViewById(R.id.secondMatch);
+        navigation=findViewById(R.id.bottomNavigation);
 
-        firstMatch.setOnClickListener(new View.OnClickListener() {
+        //click listener
+        navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(homeActivity.this, matchActivity.class);
-                startActivity(intent);
-                finish();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id=item.getItemId();
+                switch (id){
+                    case(R.id.matches):
+                        FragmentTransaction ft= manager.beginTransaction();
+                        ft.replace(R.id.fragment, tournament).commit();
+                        break;
+                    case(R.id.myTeam):
+                        FragmentTransaction ft1= manager.beginTransaction();
+                        ft1.replace(R.id.fragment, team).commit();
+                        break;
+                    case(R.id.notification):
+                        FragmentTransaction ft2= manager.beginTransaction();
+                        ft2.replace(R.id.fragment, notification).commit();
+                        break;
+                    case(R.id.profile):
+                        FragmentTransaction ft3= manager.beginTransaction();
+                        ft3.replace(R.id.fragment, profile).commit();
+                        break;
+                }
+                return true;
             }
         });
 
-        secondMatch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(homeActivity.this, matchActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
+        //setting home as first fragment to display
+        navigation.setSelectedItemId(R.id.matches);
     }
+   //option menu
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        //super.onCreateOptionsMenu(menu);
+//        getMenuInflater().inflate(R.menu.option_menu,menu);
+//        return true;
+//    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.option_menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //return super.onOptionsItemSelected(item);
-        switch (item.getItemId()){
-            case R.id.myProfile:
-                Intent intent=new Intent(homeActivity.this, userProfile.class);
-                startActivity(intent);
-                break;
-            case R.id.myTeam:
-                Intent intent2=new Intent(homeActivity.this, teams.class);
-                startActivity(intent2);
-                break;
-            case R.id.logOut:
-                Intent intent3=new Intent(homeActivity.this, loginActivity.class);
-                startActivity(intent3);
-                finish();
-                break;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        //return super.onOptionsItemSelected(item);
+//        switch (item.getItemId()){
+//            case R.id.myProfile:
+//                Intent intent=new Intent(homeActivity.this, userProfile.class);
+//                startActivity(intent);
+//                break;
+//            case R.id.myTeam:
+//                Intent intent2=new Intent(homeActivity.this, teams.class);
+//                startActivity(intent2);
+//                break;
+//            case R.id.logOut:
+//                Intent intent3=new Intent(homeActivity.this, loginActivity.class);
+//                startActivity(intent3);
+//                finish();
+//                break;
+//        }
+//        return true;
+//    }
 }

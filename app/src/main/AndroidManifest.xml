@@ -15,21 +15,6 @@
             android:name="pk.edu.uaar.group_sports_club.sports_club.signUp2"
             android:exported="false" />
         <activity
-            android:name="pk.edu.uaar.group_sports_club.sports_club.userProfile"
-            android:exported="false" />
-        <activity
-            android:name="pk.edu.uaar.group_sports_club.sports_club.teams"
-            android:exported="false" />
-        <activity
-            android:name="pk.edu.uaar.group_sports_club.sports_club.teamRegistration"
-            android:exported="false" />
-        <activity
-            android:name="pk.edu.uaar.group_sports_club.sports_club.tournamets"
-            android:exported="false" />
-        <activity
-            android:name="pk.edu.uaar.group_sports_club.sports_club.matchActivity"
-            android:exported="false" />
-        <activity
             android:name="pk.edu.uaar.group_sports_club.sports_club.homeActivity"
             android:exported="false" />
         <activity

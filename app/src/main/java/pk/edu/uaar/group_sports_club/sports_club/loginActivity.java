@@ -55,7 +55,7 @@ public class loginActivity extends AppCompatActivity {
             String email=mail.getText().toString();
             String Pwd= pass.getText().toString();
 
-            String url="http://192.168.0.106/app_project/users.php";
+            String url="http://192.168.0.101/app_project/users.php";
 
             RequestQueue queue= Volley.newRequestQueue(loginActivity.this);
 

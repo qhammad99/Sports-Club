@@ -1,179 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="pk.edu.uaar.group_sports_club.sports_club.homeActivity"
-    android:orientation="vertical"
-    android:padding="5dp"
     android:background="@drawable/back_screen"
     >
-
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        >
-        <Button
-            android:id="@+id/activityLabel"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:text="Your matches"
-            android:textSize="14sp"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:layout_margin="5dp"/>
+        android:layout_above="@id/bottomNavigation"
+        android:layout_alignParentTop="true"
+        />
 
-        <Button
-            android:layout_width="170dp"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Other Matches"
-            android:textSize="14sp"
-            android:textColor="#fff"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
-
-
-    <GridLayout
-        android:id="@+id/firstMatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:rowCount="4"
-        android:columnCount="3"
-        android:layout_marginVertical="30dp"
-        android:padding="10dp"
-        android:background="#ffc2f7">
-
-        <!--zero row-->
-        <TextView
-            android:layout_columnSpan="3"
-            android:id="@+id/matchTournament"
-            android:text="Tournament Name:"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_gravity="left"
-            android:textStyle="bold"
-            android:textColor="#ff0000"/>
-
-        <!--first row-->
-        <TextView
-            android:layout_columnSpan="2"
-            android:id="@+id/matchDay"
-            android:text="Match Day"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="left"/>
-        <TextView
-            android:id="@+id/matchTime"
-            android:text="Match Time"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="textEnd"
+            app:menu="@menu/bottom_navigation"
+            android:layout_alignParentBottom="true"
             />
-
-        <!--second row-->
-        <TextView
-            android:id="@+id/firstTeam"
-            android:text="Team One"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
-        <TextView
-            android:text="vs"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"/>
-        <TextView
-            android:id="@+id/teamTwo"
-            android:text="Team Two"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:textAlignment="textEnd"
-            />
-
-        <!--third row-->
-        <TextView
-            android:layout_columnSpan="3"
-            android:id="@+id/matchStatus"
-            android:text="Match Status:"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_gravity="left"/>
-
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/secondMatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:rowCount="4"
-        android:columnCount="3"
-        android:layout_marginVertical="30dp"
-        android:padding="10dp"
-        android:background="#a6d7ff">
-
-        <!--zero row-->
-        <TextView
-            android:layout_columnSpan="3"
-            android:id="@+id/matchTournament2"
-            android:text="Tournament Name:"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_gravity="left"
-            android:textStyle="bold"
-            android:textColor="#ff0000"/>
-        <!--first row-->
-        <TextView
-            android:layout_columnSpan="2"
-            android:id="@+id/matchDay2"
-            android:text="Match Day"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="left"/>
-        <TextView
-            android:id="@+id/matchTime2"
-            android:text="Match Time"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textAlignment="textEnd"
-            />
-
-        <!--second row-->
-        <TextView
-            android:id="@+id/thirdTeam"
-            android:text="Team Three"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_gravity="left"
-            android:textColor="@color/black"/>
-        <TextView
-            android:text="vs"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="18sp"
-            />
-        <TextView
-            android:id="@+id/fourthTeam"
-            android:text="Team Four"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:textAlignment="textEnd"
-            />
-
-        <!--third row-->
-        <TextView
-            android:layout_columnSpan="3"
-            android:id="@+id/matchStatus2"
-            android:text="Match Status:"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_gravity="left"/>
-
-    </GridLayout>
-
-</LinearLayout>
+</RelativeLayout>

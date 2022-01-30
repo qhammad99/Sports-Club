@@ -67,7 +67,7 @@ public class signUp2 extends AppCompatActivity {
                 }
                 else {
 
-                    String url="http://192.168.0.106/app_project/user_insert.php";
+                    String url="http://192.168.0.101/app_project/user_insert.php";
 
                     RequestQueue queue= Volley.newRequestQueue(signUp2.this);
                     StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
