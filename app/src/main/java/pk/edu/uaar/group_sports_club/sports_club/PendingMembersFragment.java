@@ -146,6 +146,8 @@ public class PendingMembersFragment extends Fragment {
             @Override
             public void onResponse(String response) {
                 try {
+
+                    Toast.makeText(getActivity(), sharedPreferences.getString("teamid", ""), Toast.LENGTH_SHORT).show();
                     JSONObject jsonObject = new JSONObject(response);
                     Toast.makeText(getActivity(), jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                     FragmentManager manager=getParentFragmentManager();
@@ -166,7 +168,7 @@ public class PendingMembersFragment extends Fragment {
             protected Map<String, String> getParams(){
                 Map params = new HashMap<String, String>();
                 params.put("id", memberArrayList.get(index).getId());
-                params.put("team_id", sharedPreferences.getString("reqid",""));
+                params.put("team_id", sharedPreferences.getString("teamid",""));
                 return params;
             }
         };
