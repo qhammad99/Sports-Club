@@ -2,7 +2,9 @@ package pk.edu.uaar.group_sports_club.sports_club;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -77,6 +79,12 @@ public class signUp2 extends AppCompatActivity {
                                 JSONObject jsonObject = new JSONObject(response);
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
                                 if(!jsonObject.getBoolean("error")) {
+                                    SharedPreferences sharedPreferences= getSharedPreferences("login_preference", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                                    editor.clear();
+                                    editor.putString("id", jsonObject.getString("id"));
+                                    editor.putString("name", jsonObject.getString("name"));
+                                    editor.commit();
                                     Intent intent = new Intent(signUp2.this, homeActivity.class);
                                     startActivity(intent);
                                     finish();
