@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/label"
+        android:textAlignment="center"
+        android:textColor="#1c03fc"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:text="You are not in any team!"
+        />
+    <Button
+        android:layout_below="@id/label"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Create Team"
+        android:id="@+id/createTeam"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createTeam"
+        android:id="@+id/joinTeam"
+        android:text="Join team"/>
+
+</RelativeLayout>

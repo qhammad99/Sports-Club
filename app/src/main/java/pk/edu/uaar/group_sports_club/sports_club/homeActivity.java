@@ -24,7 +24,6 @@ public class homeActivity extends AppCompatActivity {
 
     TournamentFragment tournament=new TournamentFragment();
     TeamFragment team = new TeamFragment();
-    NotificationFragment notification= new NotificationFragment();
     ProfileFragment profile= new ProfileFragment();
 
     @Override
@@ -47,10 +46,6 @@ public class homeActivity extends AppCompatActivity {
                     case(R.id.myTeam):
                         FragmentTransaction ft1= manager.beginTransaction();
                         ft1.replace(R.id.fragment, team).commit();
-                        break;
-                    case(R.id.notification):
-                        FragmentTransaction ft2= manager.beginTransaction();
-                        ft2.replace(R.id.fragment, notification).commit();
                         break;
                     case(R.id.profile):
                         FragmentTransaction ft3= manager.beginTransaction();

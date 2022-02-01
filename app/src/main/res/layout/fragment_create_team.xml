@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.CreateTeam">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team Info"
+        android:textColor="#fa1505"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/label"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/etTeamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:hint="Team Name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Team Location"
+        android:textSize="20sp"
+        android:id="@+id/etTeamLocation"
+        android:layout_below="@id/etTeamName"/>
+
+    <Button
+        android:id="@+id/saveTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTeamLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Save" />
+
+</RelativeLayout>

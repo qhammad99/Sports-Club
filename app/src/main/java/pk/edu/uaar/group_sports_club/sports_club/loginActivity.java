@@ -81,10 +81,17 @@ public class loginActivity extends AppCompatActivity {
                             editor.putString("id", jsonObject.getString("id"));
                             editor.putString("name", jsonObject.getString("name"));
                             editor.commit();
+                            if(jsonObject.getString("id").equals("1")){
+                                Intent intent1 = new Intent(loginActivity.this, MainActivityAdmin.class);
+                                startActivity(intent1);
+                                finish();
 
-                            Intent intent = new Intent(loginActivity.this, homeActivity.class);
-                            startActivity(intent);
-                            finish();
+                            }
+                            else{
+                                Intent intent = new Intent(loginActivity.this, homeActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         }
                     }catch (JSONException e) {
                         e.printStackTrace();

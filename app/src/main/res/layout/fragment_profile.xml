@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     tools:context="pk.edu.uaar.group_sports_club.sports_club.ProfileFragment">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="177dp"
-        android:layout_height="151dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/logo_description"
-        android:src="@drawable/male" />
 
     <TextView
         android:id="@+id/label"
@@ -21,21 +13,21 @@
         android:textAlignment="center"
         android:textSize="26sp"
         android:textColor="#fa1505"
-        android:layout_below="@id/logo"
+        android:layout_marginTop="50dp"
         />
+
     <TextView
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_name"
         android:layout_below="@id/label"
-        android:textSize="18sp"
-        android:padding="10dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/average_sans"
+        android:padding="10dp"
+        android:text="@string/hint_name"
         android:textColor="#5e17eb"
         android:textColorHint="#5e17eb"
-        android:fontFamily="@font/average_sans"
-        />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/etMail"
@@ -81,20 +73,6 @@
 
 
     <Button
-        android:id="@+id/nextBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Change password"
-        android:textSize="15sp"
-        android:backgroundTint="#5e17eb"
-        android:layout_marginTop="20dp"
-        android:textColor="#fff"
-        android:layout_below="@id/etCity"
-        android:layout_marginRight="10dp"
-        />
-
-    <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,7 +82,7 @@
         android:backgroundTint="#5e17eb"
         android:layout_marginTop="20dp"
         android:textColor="#fff"
-        android:layout_below="@id/nextBtn"
+        android:layout_below="@id/etCity"
         android:layout_marginRight="10dp"
         />
 

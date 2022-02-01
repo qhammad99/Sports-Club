@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import pk.edu.uiit.arid_2471.checkingemulator.R;
 
@@ -46,9 +47,17 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(sharedPreferences.contains("name")){
-                    Intent intent=new Intent(MainActivity.this,homeActivity.class);
-                    startActivity(intent);
+                if(sharedPreferences.contains("id")){
+                    String id= sharedPreferences.getString("id","").toString();
+                    String adminId="1";
+                    if(id.equals(adminId.toString())){
+                        Intent intent = new Intent(MainActivity.this, MainActivityAdmin.class);
+                        startActivity(intent);
+                    }else {
+                        Toast.makeText(getApplicationContext(), id, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, homeActivity.class);
+                        startActivity(intent);
+                    }
                 }
                 else{
                     Intent intent=new Intent(MainActivity.this,loginActivity.class);
