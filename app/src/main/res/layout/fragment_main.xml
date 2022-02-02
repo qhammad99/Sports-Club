@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabNavigator"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/tournaments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="Tournaments" />
+
+        <Button
+            android:id="@+id/matches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toRightOf="@id/tournaments"
+            android:text="Matches" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_below="@id/tabNavigator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/thirdFrame"/>
+
+</RelativeLayout>

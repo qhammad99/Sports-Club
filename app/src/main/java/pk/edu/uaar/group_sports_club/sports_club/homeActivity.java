@@ -22,7 +22,7 @@ public class homeActivity extends AppCompatActivity {
     FragmentManager manager=getSupportFragmentManager();
     BottomNavigationView navigation;
 
-    TournamentFragment tournament=new TournamentFragment();
+    MainFragment tournament=new MainFragment();
     TeamFragment team = new TeamFragment();
     ProfileFragment profile= new ProfileFragment();
 

@@ -154,7 +154,7 @@ public class TeamFragment extends Fragment {
                             editor.putString("teamid", jsonObject.getString("teamid"));
                             editor.commit();
 
-                            Toast.makeText(getActivity(), "teamName: " + jsonObject.getString("teamname"), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getActivity(), "teamName: " + jsonObject.getString("teamname"), Toast.LENGTH_SHORT).show();
                         }
                     }
                     else{

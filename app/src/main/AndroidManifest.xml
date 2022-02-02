@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CheckingEmulator"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="pk.edu.uaar.group_sports_club.sports_club.CreateTournament"
+            android:exported="false" />
+        <activity
+            android:name="pk.edu.uaar.group_sports_club.sports_club.TournamentDetail"
+            android:exported="false" />
+        <activity
             android:name="pk.edu.uaar.group_sports_club.sports_club.MainActivityAdmin"
             android:exported="false" />
         <activity

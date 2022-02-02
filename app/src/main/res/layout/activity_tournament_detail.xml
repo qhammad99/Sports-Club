@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pk.edu.uaar.group_sports_club.sports_club.TournamentDetail">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tournament Detail"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textColor="#fa1505"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/average_sans"
+        android:padding="10dp"
+        android:text="@string/hint_name"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/etMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Members"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:layout_below="@id/etName"
+        android:fontFamily="@font/average_sans"
+        />
+
+    <TextView
+        android:id="@+id/RegDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMembers"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/average_sans"
+        android:hint="Registration Date"
+        android:padding="10dp"
+        android:textColor="#5e17eb"
+        android:textColorHint="#5e17eb"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>

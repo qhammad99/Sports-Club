@@ -1,6 +1,9 @@
 package pk.edu.uaar.group_sports_club.sports_club;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +14,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import pk.edu.uiit.arid_2471.checkingemulator.R;
 
@@ -66,20 +86,43 @@ public class TournamentFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tournament, container, false);
-        GridLayout firstMatch;
-        firstMatch=view.findViewById(R.id.firstMatch);
+        ListView members=view.findViewById(R.id.tournamentList);
+        ArrayList<tournament> memberArrayList = new ArrayList<>();
+        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("login_preference", MODE_PRIVATE);
 
-        firstMatch.setOnClickListener(new View.OnClickListener() {
+        String url="http://192.168.0.101/app_project/tournamentDetail.php";
+        RequestQueue queue= Volley.newRequestQueue(getActivity());
+        StringRequest stringRequest= new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            public void onClick(View v) {
-                FragmentManager manager;
-                manager=getParentFragmentManager();
-                MatchFragment matchDetail= new MatchFragment();
-                FragmentTransaction ft= manager.beginTransaction();
-                ft.replace(R.id.fragment, matchDetail).commit();
-            }
-        });
+            public void onResponse(String response) {
+                try {
+                    JSONObject obj = new JSONObject(response);
+                    if (!obj.getBoolean("error")) {
+                        tournament newMember = new tournament(obj.getString("name"), obj.getString("date"));
+                        memberArrayList.add(newMember);
+                    }else
+                        Toast.makeText(getActivity(), obj.getString("error"),Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
+                tournamentListAdapter adapter= new tournamentListAdapter(getActivity(), R.layout.fragment_tournament, memberArrayList);
+                members.setAdapter(adapter);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams(){
+                Map params = new HashMap<String, String>();
+                params.put("id", sharedPreferences.getString("teamid",""));
+                return params;
+            }
+        };
+        queue.add(stringRequest);
         return view;
     }
 }
